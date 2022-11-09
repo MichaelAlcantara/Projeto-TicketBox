@@ -6,7 +6,7 @@ Software para descompactar:
 https://www.7-zip.org/download.html
 
 # vendaIngresso
-Angular 12
+Angular 12.0.5
   > Angular Material = https://v12.material.angular.io/
     > ng add @angular/material
   > ngx-toastr = https://www.npmjs.com/package/ngx-toastr
@@ -18,7 +18,7 @@ SQL Serve ou h2-console
 
 # A parte dianteira
 
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 12.0.0.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 12.0.5
 
 ## Servidor de desenvolvimento
 
