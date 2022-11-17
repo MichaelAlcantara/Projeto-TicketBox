@@ -1,0 +1,176 @@
+<!----Cartazes dos filmes---->
+<section class="serviceAssento container-fluid">
+    <div class="row">
+        <div class="col-md-12 telaOpcao">
+        <h1>Progresso</h1>
+
+            <!--Detalhes da compra:-->
+          <!--Linear isLinear=> Deixa ele aperta em qualquer um-->
+          <mat-stepper class="telaOpcao" orientation="vertical" [linear]="isLinear" #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+              <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Detalhes da compra</ng-template>
+                
+              <div class="col-md-8">
+                Número da Sessão: #1<br>
+                Data da sessão: 20/10/2022 / Horario da sessão: 14:30<br>
+                Sala 1<br>
+                Filme: Minions<br>
+                Cinema: Cinemark
+              </div>  
+              <div>
+                <button matStepperNext>Próximo</button>
+              </div>
+              </form>
+            </mat-step>
+            
+            <!--Escolhe assento:-->
+
+            <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Escolhe assento:</ng-template>
+                <div class="col-md-12">
+                    <h2>Assentos:</h2>
+                    <div class="row">
+                        <!--Assentos E-->
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E01</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E02</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E03</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E04</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E05</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E06</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E07</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E08</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E09</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E10</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E11</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E12</div>
+
+                        <!--Assentos D-->
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D01</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D02</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D03</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D04</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D05</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D06</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D07</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D08</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D09</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D10</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D11</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D12</div>
+                        
+                        <!--Assentos C-->
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C01</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C02</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C03</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C04</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C05</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C06</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C07</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C08</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C09</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C10</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C11</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C12</div>
+
+                        <!--Assentos B-->
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B01</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B02</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B03</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B04</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B05</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B06</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B07</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B08</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B09</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B10</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B11</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B12</div>
+
+                        <!--Assentos A-->
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A01</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A02</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A03</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A04</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A05</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A06</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A07</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A08</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A09</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A10</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A11</div>
+                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A12</div>
+
+                       
+                        <div if="col-md-12 " id="telao"><mat-icon>movie</mat-icon></div>
+                    </div>
+                </div>
+                <div>
+                  <button matStepperNext>Próximo</button>
+                </div>
+              </form>
+            </mat-step>
+            
+            <!--Detalhes de compra-->
+
+            <mat-step [stepControl]="treeFormGroup">
+              <form [formGroup]="treeFormGroup">
+                <ng-template matStepLabel>Detalhes da compra</ng-template>
+                
+              <div class="col-md-8">
+                  <h1>Detalhes da compra:</h1>
+                  Data da sessão: 20/10<br>
+                  Horario da sessão: 14:30<br>
+                  Sala 01<br>
+                  Assento: A1, A2.<br>
+                  Quantidade Inteira:
+                  <select>
+                      <option>1</option>
+                  </select><br>
+                  Quantidade Meia:
+                  <select>
+                      <option>1</option>
+                  </select><br>
+      
+              </div>
+              <div>
+                <button matStepperNext>Próximo</button>
+              </div>
+              </form>
+            </mat-step>
+
+            <!--Forma de Pagamento-->
+
+            <mat-step [stepControl]="fourFormGroup">
+              <form [formGroup]="fourFormGroup">
+                <ng-template matStepLabel>Forma de pagamento</ng-template>
+                <div class="col-md-8">
+                  <table>
+                      <tr>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                      </tr>
+                      <tr>
+                        <td>1x Inteira</td>
+                        <td>R$: 20,00</td>
+                      </tr>
+                      <tr>
+                          <td>1x Inteira</td>
+                          <td>R$: 20,00</td>
+                      </tr>
+                      <tr>
+                          <td>TOTAL:</td>
+                          <td>R$: 40,00</td>
+                      </tr>                      
+                    </table>
+                    <a class="pagamento" routerLink="pagamento/debito">Cartão de Débito</a>
+                    <a class="pagamento" routerLink="pagamento/debito">Cartão de Débito</a>
+                    <a class="pagamento" routerLink="pagamento/dinheiro">Dinheiro</a>
+              </div>
+              </form>
+            </mat-step>
+        </mat-stepper>
+
+        
+    </div>
