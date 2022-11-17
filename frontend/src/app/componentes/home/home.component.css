@@ -1,0 +1,123 @@
+/*IMPORT DE FONTES DE TEXTO*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/*DEFINIÇOES GERAIS*/
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Open Sans','sans-serif';
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-color: #252525;
+}
+/*DEFINIÇOES CONTEINER LANCAMENTOS*/
+.conteiner-index{
+	background-color: #191919;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+.conteiner-index p{
+    color: white;
+	font-size: 400%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+/*DEFINIÇAO CARD*/
+.conteiner-card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+}
+
+.card1{
+	height: 500px;
+	width: 20%;
+	background-image: url("../../../assets/img/av2cartaz.jpg");
+    background-size: 100% 100%;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+    color: white;
+}
+.card2{
+	height: 500px;
+	width: 20%;
+	background-image: url("../../../assets/img/av2cartaz.jpg");
+    background-size: 100% 100%;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+    color: white;
+}
+.card3{
+	height: 500px;
+	width: 20%;
+	background-image: url("../../../assets/img/av2cartaz.jpg");
+    background-size: 100% 100%;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+    color: white;
+}
+/*DEFINIÇOES HOVER CARDS*/
+.card1 div:hover{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    height: 500px;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 60%;
+    font-size: 200%;
+
+}
+.card_texto_null {
+    height: 500px;
+    font-size: 0%;
+}
+
+.card2 div:hover{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    height: 500px;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 60%;
+    font-size: 200%;
+
+}
+.card_texto_null {
+    height: 500px;
+    font-size: 0%;
+}
+
+.card3 div:hover{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    height: 500px;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 60%;
+    font-size: 200%;
+
+}
+.card_texto_null {
+    height: 500px;
+    font-size: 0%;
+}
+
+
+
