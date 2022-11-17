@@ -1,0 +1,106 @@
+<div class="hero">
+    <section class="d-flex"><!-- Capa -->
+        <div id="ajuste" class="container-fluid align-self-center">
+            <div class="row ">
+              <div class="col-md-12 conteudo-titulo">
+                  Filmes em Cartazes
+              </div>
+            </div>
+          </div>
+      </section>	
+</div>
+
+<!----Cartazes dos filmes---->
+<section class="service">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="carousel-legenda" class="carousel slide col-md-12" data-ride="carousel"><!--Carousel -->
+
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+
+                <li class="active" data-target="#carousel-legenda" data-slide-to="0"></li>
+
+                <li data-target="#carousel-legenda" data-slide-to="1"></li>
+
+                <li data-target="#carousel-legenda" data-slide-to="2"></li>
+
+                </ol>
+
+                <div class="carousel-inner"><!--Inner -->
+                
+                <div class="carousel-item active">
+                    
+                    <img src="../../../assets/img/2428965.jpg" class="img-fluid">
+                    <div class="carousel-caption">
+                    <div>
+                        <h3>Item 1</h3>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                    </div>
+                    
+                </div>
+
+                <div class="carousel-item">
+                    
+                        <img src="../../../assets/img/Homem-Aranha-Sem-Volta-Para-Casa.jpg" class="img-fluid">
+                        <div class="carousel-caption">
+                            
+                                <h3>Item 2</h3><br>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                                </div>
+                    
+                    
+                </div>
+
+                <div class="carousel-item">
+                    
+                    <img src="../../../assets/img/Avatar-Teaser-Poster.jpg" class="img-fluid">
+                    <div class="carousel-caption">
+                    <h3>Item 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    </div>
+                    
+                </div>
+
+                </div><!--/Inner -->
+
+                <!-- Controles -->
+                <a href="#carousel-legenda" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </a>
+
+                <a href="#carousel-legenda" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div><!--/Carousel -->
+        </div>
+    </div>		
+</section>
+
+<!-----service section start----------->
+<div class="about">
+    <div class="title">
+        <h2>Filmes em Cartazes</h2>
+    </div>
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="col-md-2" *ngFor="let filmes of filme">
+                <h4>{{filmes.nomeFilme}}</h4>
+                <img src="../../../assets/img/Homem-Aranha-Sem-Volta-Para-Casa.jpg" class="img-fluid">
+                <a class="btn" routerLink="/filme/sobreFilme">Compra</a>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    
+</div>
