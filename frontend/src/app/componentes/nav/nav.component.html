@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm hero">
+    <!-- LOGO -->
+    
+    <a routerLink="home" class="navbar-brand"><h2 class="logo"><u>Ticket</u><span>Box</span></h2></a>
+
+    <!-- NAVEGAÇÃO -->
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+        <a class="nav-link " routerLink="home">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " routerLink="filme">Filmes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " routerLink="cinema">Cinemas</a>
+    </li>
+    <li class="nav-item">
+        <a *ngIf="situacao == true" class="nav-link login" routerLink="login">Perfil</a>
+        <a class="nav-link login" routerLink="login">Login</a>
+    </li>
+</ul>
+</nav>
+<router-outlet></router-outlet>
