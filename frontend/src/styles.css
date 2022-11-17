@@ -1,15 +1,85 @@
+@import '../node_modules/ngx-toastr/toastr.css';
+
 *{
 	padding: 0;
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
 }
-.hero{
+body{
+	overflow-x: hidden;
+	background-color: #191919;
+}
+nav.hero{
+	background-color: #191919;
+}
+div.hero{
+	height: 550px;
+	width: 90%;
+	animation: changeBackgroundColor 20s infinite;
+	background-size: cover;
+	background-position: top;
+	margin-left: 0%;
+	background-color: #191919;
+}
+@keyframes changeBackgroundColor { 
+	10% { 
+		background-image: url("assets/img/Ving.1000x500.jpg");
+		height: 550px;
+		width: 100%;
+		border: solid 2px;
+  		text-shadow: white 0px 0px 5px;
+  		font-size: 16px;
+	}
+	30%{
+		background-image: url("assets/img/multiversoloucura.jpg");
+		height: 550px;
+		width: 100%;
+		border: solid 2px;
+  		text-shadow: white 0px 0px 5px;
+  		font-size: 16px;
+	}
+	
+	50% { 
+        background-image: url("assets/img/img.jpg");
+		height: 550px;
+		width: 100%;
+		border: solid 2px;
+  		text-shadow: white 0px 0px 5px;
+  		font-size: 16px;
+	} 
+	70% {
+		background-image: url("assets/img/Thoramoretrovao.png");
+		height: 550px;
+		width: 100%;
+		border: solid 2px;
+  		text-shadow: white 0px 0px 5px;
+  		font-size: 16px;
+	}
+	80%{
+		background-image: url("assets/img/TopGunMaverick.jpg");
+		height: 500px;
+		width: 100%;
+		border: solid 2px;
+  		text-shadow: white 0px 0px 5px;
+  		font-size: 16px;
+	}
+
+
+	100% { 
+		background-image: url("assets/img/HA.1000x500.jpg");
+		height: 500px;
+		width: 100%;
+		border: solid 2px;
+  		text-shadow: white 0px 0px 5px;
+  		font-size: 16px;
+	} 
+  }
+.hero2{
 	height: 100vh;
 	width: 100%;
-	background-image: url(../img/pexels-tima-miroshnichenko-7991320.jpg);
-	background-size: cover;
 	background-position: center;
+	width: 100%;
 }
 nav{
 	display: flex;
@@ -29,6 +99,7 @@ nav{
 }
 span{
 	color: #3D33FF;
+	text-decoration: none;
 
 }
 nav ul li{
@@ -43,10 +114,10 @@ nav ul li a{
 	text-transform: capitalize;
 }
 nav ul li a:hover{
-	color: #3D33FF;
+	color: black;
 	transition: .4s;
 }
-.btn{
+.login{
 	background-color:#3D33FF;
 	color: white;
 	text-decoration: none;
@@ -59,6 +130,7 @@ nav ul li a:hover{
 .btn:hover{
 	transform: scale(1.2);
 	background-color: transparent;
+	background-color: #454545;
 }
 .content{
 	position: absolute;
@@ -170,6 +242,29 @@ button:hover{
 	cursor: pointer;
 }
 
+.service .botaoCinema{
+	background-color: #858585;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 40px;
+	border-radius: 10px;
+	transition: .4s; 
+}
+.service .botaoCinema:hover{
+	background-color: #fff;
+	color: #000;
+	border: 2px solid #3D33FF;
+	cursor: pointer;
+}
+
+.divisao{
+	border: 1px solid #858585;
+	width: 100%;
+	margin: 1% 0;
+	}
+
 .service{
 	background: #101010;
 	width: 100%;
@@ -189,7 +284,7 @@ button:hover{
 	min-height: 400px;
 }
 .card{
-	height: 365px;
+	height: 450px;
 	width: 335px;
 	padding: 20px 35px;
 	background: #191919;
@@ -261,12 +356,13 @@ button:hover{
 footer{
 	position: relative;
 	width: 100%;
-	height: 400px;
+	height: 250px;
 	background: #101010;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding-top: 50px;
 }
 footer p:nth-child(1){
 	font-size: 30px;
@@ -301,9 +397,490 @@ footer p:nth-child(2){
 	transform: scale(1.3);
 	transition: .3s;
 }
-.end{
+
+
+
+
+
+.container #carousel-legenda{
+	height: 600px;
+}
+
+.service #carousel-legenda img{
+	margin-left: 32%;
+   margin-right: 10%;
+   margin-bottom: 16%;
+   text-align: center;
+   width: 400px;
+   height: 450px;
+}
+
+#ajuste{
+	margin-left: 100px;
 	position: absolute;
-	color:#3D33FF;
-	bottom: 35px;
-	font-size: 14px; 
+	top: 50%;
+}
+
+.conteudo-titulo{
+	background: rgba(168,168,168,0.4);
+	top: 45%;
+	color: #fff;
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	border-color: rgba(255,255,255,0.5);
+	margin-right: 100%;
+}
+
+
+.cinema{
+	width: 100%;
+	padding: 100px 0px 30px 0px;
+	background-image: url("assets/img/notundefined_1654714338.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.cinema .imagemCinema{
+	height: 300px;
+	width: 300px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.cinema h1{
+	height: 300px;
+	color: #fff;
+}
+.filme{
+	width: 100%;
+	padding: 100px 0px 30px 0px;
+	background-image: url("assets/img/2428965.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.filme .imagemfilme{
+	height: 300px;
+	width: 300px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.filme h1{
+	height: 300px;
+	color: #fff;
+}
+.filme .categoria{
+	height: 300px;
+	width: 300px;
+	position: relative;
+}
+.filme .duracao{
+	height: 300px;
+	width: 300px;
+	position: relative;
+}
+
+.filme .categoria{
+	border: 1px solid #191919;
+	color: #fff;
+	height: 10px;
+	width: 20px;
+}
+.filme .faixaEtaria{
+	border: 1px solid #191919;
+	margin-top: 10px;
+	height: 10px;
+	width: 20px;
+	color: #fff;
+}
+
+.serviceCinema{
+	color: #fff;
+	background: #101010;
+	padding: 1%;
+}
+
+
+.barraLateral{
+	border-right: 1px solid #191919;
+}
+
+.aboutCinema{
+	width: 100%;
+	height: 50%;
+	padding: 1%;
+	background-color: #191919;
+}
+.aboutCinema .carousel{
+	height: 50%;
+	width: 100%;
+}
+
+.aboutCinema h1{
+	color: #fff;
+}
+
+.aboutCinema #carousel-legenda img{
+   margin-left: 20%;
+   margin-bottom: 16%;
+   text-align: center;
+   width: 100px;
+   height: 150px;
+}
+
+.serviceCinema .col-md-6 h1{
+	border-bottom: 1px solid #fff;
+}
+
+.secao{
+	color: #fff;
+}
+
+.secao h1{
+	border-top: 1px solid #fff;
+	margin-top: 10px;
+}
+
+.secao .row div{
+	border: 1px solid #858585;
+	background-color: #454545;
+	margin-left: 20px;
+}
+
+.secao h3{
+	border-top: 1px solid #fff;
+}
+.aboutSessao{
+	background-color: #858585;
+	color: #fff;
+}
+
+.aboutSessao h3{
+	margin-left: 17px;
+}
+
+
+
+.serviceSessao{
+	color: #fff;
+	background: #101010;
+	padding: 1%;
+}
+
+.serviceSessao div{
+	padding: 10px;
+}
+
+.serviceSessao .bolinhaVerde{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: darkgreen;
+	background-color: darkgreen;
+	border-radius: 100%;
+}
+
+.serviceSessao .bolinhaVermelho{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: yellow;
+	background-color: yellow;
+	border-radius: 100%;
+	margin-bottom: 10px;
+}
+
+.serviceSessao .telao{
+	margin-top: 10px;
+	border: 1px solid #000;
+	background-color: #fff;
+	text-align: center;
+	color: #000;
+}
+
+
+
+.serviceDetalhes{
+	color: #fff;
+	background: #101010;
+	padding: 1%;
+}
+
+.serviceDetalhes div{
+	padding: 10px;
+}
+
+.serviceDetalhes .bolinhaVerde{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: darkgreen;
+	background-color: darkgreen;
+	border-radius: 100%;
+}
+
+.serviceDetalhes .bolinhaVermelho{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: yellow;
+	background-color: yellow;
+	border-radius: 100%;
+	margin-bottom: 10px;
+}
+
+.serviceDetalhes .telao{
+	border: 1px solid #000;
+	background-color: #000;
+	text-align: center;
+}
+
+.serviceDetalhes .col-md-1{
+	border: 1px solid #454545;
+	border-radius: 100%;
+	background-color: green;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+}
+
+.servicePagamneto{
+	color: #fff;
+    background: linear-gradient(90deg, rgba(82,79,79,1) 47%, rgba(62,62,62,1) 60%, rgba(52,52,52,1) 71%);
+	padding: 1%;
+}
+
+.servicePagamneto div{
+	padding: 10px;
+}
+
+.servicePagamneto .bolinhaVerde{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: darkgreen;
+	background-color: darkgreen;
+	border-radius: 100%;
+}
+
+.servicePagamneto .bolinhaVermelho{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: yellow;
+	background-color: yellow;
+	border-radius: 100%;
+	margin-bottom: 10px;
+}
+
+.servicePagamneto .telao{
+	border: 1px solid #000;
+	background-color: #000;
+	text-align: center;
+}
+
+.servicePagamneto .col-md-1{
+	border: 1px solid #454545;
+	border-radius: 100%;
+	background-color: green;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+}
+
+.servicePagamneto td{
+	padding: 4px;
+}
+
+.servicePagamneto th{
+	padding: 4px;
+}
+
+.servicePagamneto input{
+	margin-left: 10px;
+	border-radius: 10%;
+}
+
+.servicePagamneto .finalizar{
+	margin-left: 70%;
+	text-decoration: none;
+	border: 1px solid #000;
+	padding: 10px 20px;
+	background-color: green;
+	color: #000;
+}
+.servicePagamneto .finalizar:hover{
+	text-decoration: none;
+	border: 1px solid #fff;
+	background-color: rgb(1, 44, 1);
+	color: #fff;
+	text-decoration: none;
+}
+
+
+
+
+.serviceFinalizar{
+	color: #fff;
+	background: #101010;
+	padding: 1%;
+}
+
+.serviceFinalizar div{
+	padding: 10px;
+}
+
+.serviceFinalizar .bolinhaVerde{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: darkgreen;
+	background-color: darkgreen;
+	border-radius: 100%;
+}
+
+.serviceFinalizar .bolinhaVermelho{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	color: yellow;
+	background-color: yellow;
+	border-radius: 100%;
+	margin-bottom: 10px;
+}
+
+.serviceFinalizar .telao{
+	border: 1px solid #000;
+	background-color: #000;
+	text-align: center;
+}
+
+.serviceFinalizar .col-md-1{
+	border: 1px solid #454545;
+	border-radius: 100%;
+	background-color: green;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+}
+
+.serviceFinalizar td{
+	padding: 4px;
+}
+
+.serviceFinalizar th{
+	padding: 4px;
+}
+
+.serviceFinalizar input{
+	margin-left: 10px;
+	border-radius: 10%;
+}
+
+.serviceFinalizar .filmesBotao{
+	margin-left: 70%;
+	text-decoration: none;
+	border: 1px solid #000;
+	padding: 10px 20px;
+	background-color: green;
+	color: #000;
+}
+.serviceFinalizar .filmesBotao:hover{
+	text-decoration: none;
+	border: 1px solid #fff;
+	background-color: rgb(1, 44, 1);
+	color: #fff;
+	text-decoration: none;
+}
+
+.serviceFinalizar h1{
+	border-bottom: 1px solid #454545;
+}
+
+
+
+.telaLogin{
+	background-image: url("assets/img/login/fundo2.jpg");
+	background-size: 100% auto;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 20px 45px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*IMPORT DE FONTES DE TEXTO*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/*DEFINIÇOES GERAIS*/
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Open Sans','sans-serif';
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-color: #252525;
+}
+/*DEFINIÇOES SLIDE*/
+.slide{
+    height: 800px;
+	width: 100%;
+	animation: changeBackgroundColor 20s infinite;
+	background-size: cover;
+	background-position: top;
+	margin-left: 0%;
+	background-color: #252525;
+}
+@keyframes changeBackgroundColor { 
+	10% { 
+		background-image: url("../src/assets/img/img.jpg");
+        background-size: 100% 800px;
+		border: solid 2px;
+  		text-shadow: black 0px 0px 5px;
+  		font-size: 16px;
+	}
+	30%{
+		background-image: url("../src/assets/img/Ving.1000x500.jpg");
+        background-size: 100% 800px;
+		border: solid 2px;
+        text-shadow: black 0px 0px 5px;
+  		font-size: 16px;
+	}
+	
+	50% { 
+		background-image: url("../src/assets/img/multiversoloucura.jpg");
+        background-size: 100% 800px;
+		border: solid 2px;
+        text-shadow: black 0px 0px 5px;
+  		font-size: 16px;
+	} 
+	70% {
+		background-image: url("../src/assets/img/Thoramoretrovao.png");
+        background-size: 100% 800px;
+		border: solid 2px;
+        text-shadow: black 0px 0px 5px;
+  		font-size: 16px;
+	}
+	80%{
+		background-image: url("../src/assets/img/TopGunMaverick.jpg");
+        background-size: 100% 800px;
+		border: solid 2px;
+        text-shadow: black 0px 0px 5px;
+  		font-size: 16px;
+	}
+
+
+	100% { 
+		background-image: url("../src/assets/img/HA.1000x500.jpg");
+        background-size: 100% 800px;
+		border: solid 2px;
+  		text-shadow: white 0px 0px 5px;
+  		font-size: 16px;
+	}
 }
