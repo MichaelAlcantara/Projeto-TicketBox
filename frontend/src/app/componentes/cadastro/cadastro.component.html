@@ -1,0 +1,24 @@
+<div class="container-fluid telaLogin">
+    <form class="form mat-elevation-z8">
+        <h1>cadastro</h1>
+  
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Email:</mat-label>
+          <input [formControl]="email" [(ngModel)]="cadastro.email" name="email" required matInput placeholder="Ex: Fulano@hotmail.com">
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Data de nascimento</mat-label>
+            <input [formControl]="dNascimento" [(ngModel)]="cadastro.dNascimento" required name="dNascimento" type="date" matInput placeholder="01/01/2001">
+          </mat-form-field>
+      
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Senha:</mat-label>
+            <input [formControl]="senha" [(ngModel)]="cadastro.senha" name="senha" required type="password" matInput placeholder="Ex: 123" >
+        </mat-form-field>
+  
+          <button (click)="cadastra()" mat-raised-button [disabled]="!validaCampos()" class="full-width mat-elevation-z4">Cadastra</button> 
+          <p>Já possui login?<a routerLink="/login"> Login</a></p>
+      </form>
+      
+  </div>
