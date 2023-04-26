@@ -1,24 +1,30 @@
-# vendaIngresso
-Sistema de venda de ingressos de cinemas
+# Olá seja bem-vindo(a) ao nosso Projeto TicketBox 👋
 
-Assim que baixar o projeto, tem que extrair o node_modules, sem ele o angular não roda.
+📽 - Sendo uma empresa fictício, utilizada para um Projeto Interdisciplinar na faculdade do curso de ADS( Tecnologia em Análise e Desenvolvimento de Sistemas ) no ano de 2022;<br>
+👋- Porém decisimos continua esse Projeto como um portifólio para todos os integrantes;<br>
+📽 - O nome da nossa empresa é TicketBox e tendo o objetivo de ser um sistema de vendas de ingressos de filmes;<br>
+
+# Tecnologias que usamos:
+
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="25" height="25"/>&nbsp; - HTML 5 <br>
+<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="CSS" alt="CSS" width="25" height="25"/>&nbsp; - CSS 3 <br>
+<img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="Typescript" alt="Typescript" width="25" height="25"/>&nbsp; - TypeScript <br>
+<img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" title="Java" alt="Java" width="25" height="25"/>&nbsp; - Java 11 <br>
+<img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original.svg" title="mysql" alt="mysql" width="25" height="25"/>&nbsp; - h2-console <br>
+ > Angular Material = https://v12.material.angular.io/<br>
+    - ng add @angular/material<br>
+  > ngx-toastr = https://www.npmjs.com/package/ngx-toastr<br>
+    - npm i ngx-toastr@12.0.1 --save<br>
+
+# Framework:
+
+<img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" title="Angular" alt="Angular" width="25" height="25"/>&nbsp; - Angular 12.0.5 ( Front -end)<br>
+<img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original.svg" title="Spring" alt="Spring" width="25" height="25"/>&nbsp; - SpringBoot 2.1.4 ( Back-end )
+
+# Instruções
+Assim que baixar o projeto, tem que extrair o node_modules, sem ele o angular não roda.<br>
 Software para descompactar:
 https://www.7-zip.org/download.html
-
-# vendaIngresso
-Angular 12.0.5
-  > Angular Material = https://v12.material.angular.io/
-    > ng add @angular/material
-  > ngx-toastr = https://www.npmjs.com/package/ngx-toastr
-    > npm i ngx-toastr@12.0.1 --save
-    
-Spring 2.1.4
-Java 11
-SQL Serve ou h2-console
-
-# A parte dianteira
-
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 12.0.5
 
 ## Servidor de desenvolvimento
 
