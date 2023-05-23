@@ -1,7 +1,7 @@
 # Olá seja bem-vindo(a) ao nosso Projeto TicketBox 👋
 
 📽 - Sendo uma empresa fictício, utilizada para um Projeto Interdisciplinar na faculdade do curso de ADS( Tecnologia em Análise e Desenvolvimento de Sistemas ) no ano de 2022;<br>
-👋- Porém decisimos continua esse Projeto como um portifólio para todos os integrantes;<br>
+👋- Porém decidimos continua esse Projeto como um portifólio para todos os integrantes;<br>
 📽 - O nome da nossa empresa é TicketBox e tendo o objetivo de ser um sistema de vendas de ingressos de filmes;<br>
 
 # Tecnologias que usamos:
