@@ -23,7 +23,7 @@ public class FilmeResource {
     @Autowired
     private FilmeService service;
 
-    @GetMapping(value = "/{idFilme}")
+    @GetMapping(value = "sobre/{idFilme}")
     public ResponseEntity<FilmeDTO> findById(@PathVariable Integer idFilme) {
         Filme obj = service.findById(idFilme);
         return ResponseEntity.ok().body(new FilmeDTO(obj));

@@ -22,7 +22,7 @@ public class CinemaRecourse {
     @Autowired
     private CinemaService service;
 
-    @GetMapping(value = "/{idCinema}")
+    @GetMapping(value = "sobre/{idCinema}")
     public ResponseEntity<CinemaDTO> findById(@PathVariable Integer idCinema) {
         Cinema obj = this.service.findById(idCinema);
         return ResponseEntity.ok().body(new CinemaDTO(obj));
