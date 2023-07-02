@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class FilmeComponent implements OnInit {
 
-  filme : Filme[] = [];
+  filmes : Filme[] = [];
 
 
   constructor(private service: AuthService) { }
@@ -19,7 +19,7 @@ export class FilmeComponent implements OnInit {
   }
 
   mapear(){
-    this.service.todosFilme().subscribe(resposta => this.filme = resposta);  
+    this.service.todosFilme().subscribe(resposta => this.filmes = resposta);  
   }
 
 }
