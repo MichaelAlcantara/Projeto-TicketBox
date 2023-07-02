@@ -1,1 +1,23 @@
-<p>sessao works!</p>
+<!-----service section start----------->
+<div class="aboutCinema container-fluid">
+    <h1 >Seções:</h1>
+    <div class="row secao"  >
+        <div class="col-md-6 secao " *ngFor="let sessoes of sessao">
+            <div>
+                {{sessoes.idSessao}}
+            <h1>{{sessoes.nomeCinema}}</h1>
+            <h3>{{sessoes.dDisponivel}}</h3>
+            <div class="row barraLateral">
+                <h2 class="col-md-12">Sala 1</h2>
+                <div class="col-md-2">
+                <a class="" routerLink="/assentos/sobre/{{sessoes.idSessao}}">
+                    14:30
+                </a>
+                </div>
+                <div class="col-md-2">16:00</div>
+                <div class="col-md-2">18:30</div>
+                <div class="col-md-2">19:00</div>
+            </div>
+        </div>
+    </div>
+</div>
