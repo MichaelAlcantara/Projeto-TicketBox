@@ -1,5 +1,5 @@
 export interface Cinema{
-    id : number;
+    idCinema ?: any;
     cidade: string;
     hAbrir: string;
     hFechar: string;

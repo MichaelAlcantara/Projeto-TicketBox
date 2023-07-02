@@ -1,9 +1,10 @@
 export interface Filme{
-    id : number;
+    idFilme ?: any;
     lancamento: string;
     descricao: string;
-    estado: number;
+    estadoLancamento: number;
     faixaEtaria: number;
     genero: string;
     nomeFilme: string;
+    idCinema?:any;
 }
