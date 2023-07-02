@@ -16,6 +16,7 @@ public class FilmeDTO {
     private Integer duracao;
     private String descricao;
     private Integer estadoLancamento;
+    private Integer idCinema;
 
     public FilmeDTO() {
         super();
@@ -32,6 +33,7 @@ public class FilmeDTO {
         this.duracao = obj.getDuracao();
         this.descricao = obj.getDescricao();
         this.estadoLancamento = obj.getEstadoLancamento();
+        this.idCinema = obj.getCinema().getIdCinema();
     }
 
     public Integer getIdFilme() {
@@ -96,6 +98,14 @@ public class FilmeDTO {
 
     public void setEstadoLancamento(Integer estadoLancamento) {
         this.estadoLancamento = estadoLancamento;
+    }
+
+    public Integer getIdCinema() {
+        return idCinema;
+    }
+
+    public void setIdCinema(Integer idCinema) {
+        this.idCinema = idCinema;
     }
 
 }
