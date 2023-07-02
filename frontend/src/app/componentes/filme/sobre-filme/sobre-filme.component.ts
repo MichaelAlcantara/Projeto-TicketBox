@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Filme } from 'src/app/models/filme';
+import { Sessao } from 'src/app/models/sessao';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-sobre-filme',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreFilmeComponent implements OnInit {
 
-  constructor() { }
+  filme : Filme;
+  sessoes : Sessao[] = [];
+  private idFilme:any;
+
+  constructor(private route : ActivatedRoute,  private service: AuthService) { }
 
   ngOnInit(): void {
+    this.service.todasSessao().subscribe(resposta => this.sessoes = resposta);  
+    this.idFilme = this.route.snapshot.paramMap.get('idFilme')
+    this.service.filmePorId(this.idFilme).subscribe(respota => {
+      this.filme = respota;
+    });
   }
 
 }
