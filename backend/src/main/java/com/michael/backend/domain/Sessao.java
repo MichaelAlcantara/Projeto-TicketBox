@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -97,4 +98,25 @@ public class Sessao implements Serializable {
         this.cinema = cinema;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(cinema, compra, dDisponivel, filme, idSessao, preco);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Sessao other = (Sessao) obj;
+        return Objects.equals(cinema, other.cinema) && Objects.equals(compra, other.compra)
+                && Objects.equals(dDisponivel, other.dDisponivel) && Objects.equals(filme, other.filme)
+                && Objects.equals(idSessao, other.idSessao) && Objects.equals(preco, other.preco);
+    }
+    
+    
+    
 }
