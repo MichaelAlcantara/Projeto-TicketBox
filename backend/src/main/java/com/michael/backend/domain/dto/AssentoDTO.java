@@ -9,8 +9,9 @@ public class AssentoDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer id;
-    private String assento;
+    private String nome;
     private Boolean situacao;
+    private Integer qtd;
 
     public AssentoDTO() {
         super();
@@ -19,8 +20,9 @@ public class AssentoDTO implements Serializable {
     public AssentoDTO(Assentos obj) {
         super();
         this.id = obj.getId();
-        this.assento = obj.getAssento();
+        this.nome = obj.getNome();
         this.situacao = obj.getSituacao();
+        this.qtd = obj.getQtd();
     }
 
     public Integer getId() {
@@ -31,12 +33,12 @@ public class AssentoDTO implements Serializable {
         this.id = id;
     }
 
-    public String getAssento() {
-        return assento;
+    public String getNome() {
+        return nome;
     }
 
-    public void setAssento(String assento) {
-        this.assento = assento;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Boolean getSituacao() {
@@ -45,6 +47,14 @@ public class AssentoDTO implements Serializable {
 
     public void setSituacao(Boolean situacao) {
         this.situacao = situacao;
+    }
+
+    public Integer getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(Integer qtd) {
+        this.qtd = qtd;
     }
 
 }

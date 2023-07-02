@@ -3,7 +3,9 @@ package com.michael.backend.domain.dto;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.michael.backend.domain.Sessao;
 
 public class SessaoDTO implements Serializable{
@@ -11,6 +13,7 @@ public class SessaoDTO implements Serializable{
     private static final long serialVersionUID = 1L;
     
     private Integer idSessao;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     protected LocalDate dDisponivel = LocalDate.now();
     private Double preco;
     private String nomeFilme;
@@ -89,4 +92,25 @@ public class SessaoDTO implements Serializable{
         this.idCinema = idCinema;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(dDisponivel, idCinema, idFilme, idSessao, nomeCinema, nomeFilme, preco);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        SessaoDTO other = (SessaoDTO) obj;
+        return Objects.equals(dDisponivel, other.dDisponivel) && Objects.equals(idCinema, other.idCinema)
+                && Objects.equals(idFilme, other.idFilme) && Objects.equals(idSessao, other.idSessao)
+                && Objects.equals(nomeCinema, other.nomeCinema) && Objects.equals(nomeFilme, other.nomeFilme)
+                && Objects.equals(preco, other.preco);
+    }
+    
+    
 }
