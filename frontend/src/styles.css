@@ -227,7 +227,6 @@ h5{
 	margin-bottom: 45px;
 }
 button{
-	background-color:#3D33FF;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -354,7 +353,7 @@ button:hover{
 	cursor: pointer;
 }
 footer{
-	position: relative;
+	margin-top: 10%;
 	width: 100%;
 	height: 250px;
 	background: #101010;
@@ -451,49 +450,6 @@ footer p:nth-child(2){
 
 .cinema h1{
 	height: 300px;
-	color: #fff;
-}
-.filme{
-	width: 100%;
-	padding: 100px 0px 30px 0px;
-	background-image: url("assets/img/2428965.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-}
-
-.filme .imagemfilme{
-	height: 300px;
-	width: 300px;
-	position: relative;
-	margin-bottom: 10px;
-}
-
-.filme h1{
-	height: 300px;
-	color: #fff;
-}
-.filme .categoria{
-	height: 300px;
-	width: 300px;
-	position: relative;
-}
-.filme .duracao{
-	height: 300px;
-	width: 300px;
-	position: relative;
-}
-
-.filme .categoria{
-	border: 1px solid #191919;
-	color: #fff;
-	height: 10px;
-	width: 20px;
-}
-.filme .faixaEtaria{
-	border: 1px solid #191919;
-	margin-top: 10px;
-	height: 10px;
-	width: 20px;
 	color: #fff;
 }
 
@@ -883,4 +839,18 @@ body{
   		text-shadow: white 0px 0px 5px;
   		font-size: 16px;
 	}
+}
+
+.conteiner-index{
+	background-color: #191919;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+.conteiner-index p{
+    color: white;
+	font-size: 400%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
