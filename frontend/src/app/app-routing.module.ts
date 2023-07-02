@@ -12,6 +12,9 @@ import { AssentoComponent } from './componentes/assento/assento.component';
 import { DebitoComponent } from './componentes/assento/formaPagamento/debito/debito.component';
 import { CreditoComponent } from './componentes/assento/formaPagamento/credito/credito.component';
 import { DinheiroComponent } from './componentes/assento/formaPagamento/dinheiro/dinheiro.component';
+import { SessaoComponent } from './componentes/sessao/sessao.component';
+import { CompraComponent } from './componentes/assento/compra/compra.component';
+import { FimComponent } from './componentes/assento/formaPagamento/fim/fim.component';
 
 const routes: Routes = [
   {path : 'login', component : LoginComponent},
@@ -20,13 +23,17 @@ const routes: Routes = [
     path:'', component: NavComponent, children:[
       {path : 'home', component : HomeComponent },
       {path : 'filme', component : FilmeComponent},
-      {path : 'cinema', component : CinemaComponent},
-      {path : 'filme/sobreFilme', component : SobreFilmeComponent},
-      {path : 'cinema/sobreCinema/:id', component : SobreCinemaComponent},
-      {path : 'assentos', component : AssentoComponent},
-      {path : 'assentos/pagamento/debito', component : DebitoComponent},
-      {path : 'assentos/pagamento/credito', component : CreditoComponent},
-      {path : 'assentos/pagamento/dinheiro', component : DinheiroComponent},
+      {path : 'cinemas', component : CinemaComponent},
+      {path : 'sessao', component : SessaoComponent},
+      {path : 'filme/sobre/:idFilme', component : SobreFilmeComponent},
+      {path : 'cinemas/sobre/:idCinema', component : SobreCinemaComponent},
+      {path : 'assentos/sobre/:idSessao', component : AssentoComponent, children:[
+        {path : 'compra', component : CompraComponent},
+      ]},
+      {path : 'pagamento/debito', component : DebitoComponent},
+      {path : 'pagamento/credito', component : CreditoComponent},
+      {path : 'pagamento/dinheiro', component : DinheiroComponent},
+      {path : 'pagamento/fim', component : FimComponent},
     ]
   }
 ];
