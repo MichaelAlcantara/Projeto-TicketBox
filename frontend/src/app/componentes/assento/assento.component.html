@@ -12,14 +12,14 @@
                 <ng-template matStepLabel>Detalhes da compra</ng-template>
                 
               <div class="col-md-8">
-                Número da Sessão: #1<br>
-                Data da sessão: 20/10/2022 / Horario da sessão: 14:30<br>
+                Número da Sessão: #{{sessao.idSessao}}<br>
+                Data da sessão: {{sessao.dDisponivel}} / Horario da sessão: 14:30<br>
                 Sala 1<br>
-                Filme: Minions<br>
-                Cinema: Cinemark
+                Filme: {{sessao.nomeFilme}}<br>
+                Cinema: {{sessao.nomeCinema}}
               </div>  
               <div>
-                <button matStepperNext>Próximo</button>
+                <button class="botao" matStepperNext>Próximo</button>
               </div>
               </form>
             </mat-step>
@@ -31,83 +31,27 @@
                 <ng-template matStepLabel>Escolhe assento:</ng-template>
                 <div class="col-md-12">
                     <h2>Assentos:</h2>
-                    <div class="row">
-                        <!--Assentos E-->
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E01</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E02</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E03</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E04</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E05</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E06</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E07</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E08</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E09</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E10</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E11</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>E12</div>
-
-                        <!--Assentos D-->
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D01</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D02</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D03</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D04</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D05</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D06</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D07</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D08</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D09</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D10</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D11</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>D12</div>
+                    <div class="row" >
+                        <div *ngFor="let assentos of assento">
+                          <div *ngIf="assentos.situacao == true">
+                            <button class="indisponivel"  disabled>
+                              <mat-icon>event_seat</mat-icon>
+                              <div>{{assentos.nome}}<br></div>  
+                            </button>
+                          </div>
+                          <div *ngIf="assentos.situacao != true">
+                            <button class="disponivel" type="submit" (click)="click(assentos.id, assentos.nome, assentos.situacao, assentos.qtd)" >
+                              <mat-icon>event_seat</mat-icon>
+                              <div>{{assentos.nome}}<br></div>  
+                            </button>
+                          </div>
+                        </div>
                         
-                        <!--Assentos C-->
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C01</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C02</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C03</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C04</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C05</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C06</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C07</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C08</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C09</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C10</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C11</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>C12</div>
-
-                        <!--Assentos B-->
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B01</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B02</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B03</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B04</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B05</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B06</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B07</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B08</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B09</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B10</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B11</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>B12</div>
-
-                        <!--Assentos A-->
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A01</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A02</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A03</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A04</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A05</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A06</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A07</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A08</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A09</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A10</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A11</div>
-                        <div class=" disponivel"><mat-icon>event_seat</mat-icon><br>A12</div>
-
-                       
                         <div if="col-md-12 " id="telao"><mat-icon>movie</mat-icon></div>
                     </div>
                 </div>
                 <div>
-                  <button matStepperNext>Próximo</button>
+                  <button class="botao" matStepperNext>Próximo</button>
                 </div>
               </form>
             </mat-step>
@@ -120,22 +64,21 @@
                 
               <div class="col-md-8">
                   <h1>Detalhes da compra:</h1>
-                  Data da sessão: 20/10<br>
+                  Data da sessão: {{sessao.dDisponivel}}<br>
                   Horario da sessão: 14:30<br>
                   Sala 01<br>
-                  Assento: A1, A2.<br>
-                  Quantidade Inteira:
-                  <select>
-                      <option>1</option>
-                  </select><br>
-                  Quantidade Meia:
-                  <select>
-                      <option>1</option>
-                  </select><br>
+                  <div *ngFor="let selecionados of selecionado">
+                    <div *ngIf="selecionados.situacao == true">
+                      Assento: {{selecionados.nome}}<br>
+                      <label *ngFor="let opc of op()">
+                        <button class="opc" (click)="opcao(opc.valor, opc.desc, selecionados.qtd, sessao.preco)">{{opc.desc}}</button>
+                      </label>
+                    </div>
+                  </div>
       
               </div>
               <div>
-                <button matStepperNext>Próximo</button>
+                <button class="botao" matStepperNext>Próximo</button>
               </div>
               </form>
             </mat-step>
@@ -151,22 +94,30 @@
                         <th>Quantidade</th>
                         <th>Valor</th>
                       </tr>
-                      <tr>
-                        <td>1x Inteira</td>
-                        <td>R$: 20,00</td>
+                      <tr *ngFor="let preco of valores">
+                        <div *ngIf="preco.valor == 'i'">
+                          <td>{{preco.qtd}}x {{preco.desc}}</td>
+                          <td>R$: {{preco.preco}},00</td>
+                        </div>
                       </tr>
-                      <tr>
-                          <td>1x Inteira</td>
-                          <td>R$: 20,00</td>
+                      <tr *ngFor="let preco of valores">
+                        <div *ngIf="preco.valor == 'm'">
+                          <td>{{preco.qtd}}x {{preco.desc}}</td>
+                          <td>R$: {{preco.preco}},00</td>
+                        </div>
                       </tr>
+                      
+                      
                       <tr>
                           <td>TOTAL:</td>
-                          <td>R$: 40,00</td>
-                      </tr>                      
+                      </tr>   
+                      <tr>
+                        <td>R$:{{total}}</td>
+                    </tr>                    
                     </table>
-                    <a class="pagamento" routerLink="pagamento/debito">Cartão de Débito</a>
-                    <a class="pagamento" routerLink="pagamento/debito">Cartão de Débito</a>
-                    <a class="pagamento" routerLink="pagamento/dinheiro">Dinheiro</a>
+                    <a class="pagamento" routerLink="/pagamento/debito">Cartão de Débito</a>
+                    <a class="pagamento" routerLink="/pagamento/debito">Cartão de Débito</a>
+                    <a class="pagamento" routerLink="/pagamento/dinheiro">Dinheiro</a>
               </div>
               </form>
             </mat-step>

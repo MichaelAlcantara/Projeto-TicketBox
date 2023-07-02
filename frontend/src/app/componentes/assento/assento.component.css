@@ -16,52 +16,6 @@
 	border-bottom: 1px solid #454545;
 }
 
-.telaOpcao .botaoProximo1{
-	text-decoration: none;
-	margin-left: 20px;
-	border: 1px solid #000;
-	padding: 10px 20px;
-	background-color: green;
-	color: #000;
-}
-.telaOpcao .botaoProximo1:hover{
-	text-decoration: none;
-	border: 1px solid #fff;
-	background-color: rgb(1, 44, 1);
-	color: #fff;
-	text-decoration: none;
-}
-.telaOpcao .botaoProximo{
-	text-decoration: none;
-	margin-left: 300px;
-	border: 1px solid #000;
-	padding: 10px 20px;
-	background-color: green;
-	color: #000;	
-}
-.telaOpcao .botaoProximo:hover{
-	text-decoration: none;
-	border: 1px solid #fff;
-	background-color: rgb(1, 44, 1);
-	color: #fff;
-	text-decoration: none;
-}
-
-.telaOpcao .botaoVoltar{
-	text-decoration: none;
-	margin-left: 40%;
-	border: 1px solid #000;
-	padding: 10px 20px;
-	background-color: #454545;
-	color: #000;
-}
-.telaOpcao .botaoVoltar:hover{
-	border: 1px solid #fff;
-	background-color: #858585;
-	color: #fff;
-	text-decoration: none;
-}
-
 .serviceAssento .disponivel{
 	border: 1px solid #454545;
 	border-radius: 100%;
@@ -90,18 +44,37 @@
 
 .serviceAssento .indisponivel{
 	border: 1px solid #454545;
-	background-color: yellow;
 	color: #000;
+	border-radius: 100%;
+	background-color: yellow;
+	width: 85px;
+	height: 75px;
+	margin-left: 15px;
+	margin-bottom: 10PX;
+	text-align: center;
+	align-items: center;
 }
 
-button{
+.botao .disponivel{
+		border: 1px solid #454545;
+		border-radius: 100%;
+		background-color: green;
+		width: 85px;
+		height: 75px;
+		margin-left: 15px;
+		margin-bottom: 10PX;
+		text-align: center;
+		align-items: center;
+}
+
+.botao{
     color: #fff;
     background: linear-gradient(90deg, rgba(82,79,79,1) 20%, rgba(62,62,62,1) 50%, rgba(52,52,52,1) 80%);
     border-color: rgba(52,52,52,1);
     margin: 20px 90%;
 }
 
-button:hover{
+.botao:hover{
     color: #fff;
     background: linear-gradient(90deg, rgba(52,52,52,1) 25%, rgba(62,62,62,1) 50%, rgba(82,79,79,1) 75%);
 }
@@ -119,4 +92,11 @@ button:hover{
 	background-color: rgba(1, 44, 1, 0);
 	color: #707070;
 	text-decoration: none;
+}
+
+.opc{
+	border-radius: 100%;
+	margin: 10px;
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(218,215,215,1) 43%, rgba(69,69,69,1) 100%);
+	color: #000;
 }
