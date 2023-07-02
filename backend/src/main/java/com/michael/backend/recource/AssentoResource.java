@@ -3,11 +3,15 @@ package com.michael.backend.recource;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +27,7 @@ public class AssentoResource {
     @Autowired
     private AssentoService service;
     
-    @GetMapping(value = "/{idCinema}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<AssentoDTO> findById(@PathVariable Integer idCinema) {
         Assentos obj = service.findById(idCinema);
         return ResponseEntity.ok().body(new AssentoDTO(obj));
@@ -36,4 +40,9 @@ public class AssentoResource {
         return ResponseEntity.ok().body(listDTO);
     }
     
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<AssentoDTO> uptade(@PathVariable Integer id,@Valid @RequestBody AssentoDTO objDTO){
+        Assentos obj = service.uptade(id, objDTO);
+        return ResponseEntity.ok().body(new AssentoDTO(obj));
+    }
 }

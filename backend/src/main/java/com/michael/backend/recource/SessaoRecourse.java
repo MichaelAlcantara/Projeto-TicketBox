@@ -29,13 +29,13 @@ public class SessaoRecourse {
     @Autowired
     private SessaoDao dao;
     
-    @GetMapping(value = "/{idSessao}")
+    @GetMapping(value = "sobre/{idSessao}")
     public ResponseEntity<SessaoDTO> findById(@PathVariable Integer idSessao){
         Sessao obj = service.findById(idSessao);
         return ResponseEntity.ok().body(new SessaoDTO(obj));
     }
     
-    @GetMapping("/todos")
+    @GetMapping()
     public ResponseEntity<List<SessaoDTO>> findAll(){
         List<Sessao> list = service.findAll();
         List<SessaoDTO> listDTO = list.stream().map(obj -> new SessaoDTO(obj)).collect(Collectors.toList());
