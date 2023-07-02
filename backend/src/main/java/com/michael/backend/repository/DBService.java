@@ -42,18 +42,19 @@ public class DBService {
 
     @Bean
     public void instanciaDB() {
-        Filme fil1 = new Filme(null, "Vingadores", "Ação", 14, 240, "aaaaaaaa", 1);
-        Filme fil2 = new Filme(null, "Batman", "Ação", 16, 120, "aaaaaaaa", 1);
-        Filme fil3 = new Filme(null, "Bob esponja", "Desenho", 0, 245, "aaaaaaaa", 1);
-        Filme fil4 = new Filme(null, "Avatar", "Aventura", 10, 160, "aaaaaaaa", 1);
-        Filme fil5 = new Filme(null, "Barbie", "Desenho", 0, 90, "aaaaaaaa", 1);
-
+       
+       
+        Cinema cine1 = new Cinema(null, "Cinema 1", "São Paulo");
+        Cinema cine2 = new Cinema(null, "Cinema 2", "São Paulo");
+        Cinema cine3 = new Cinema(null, "Cinema 3", "São Paulo");
+        Cinema cine4 = new Cinema(null, "Cinema 4", "São Paulo");
+        Cinema cine5 = new Cinema(null, "Cinema 5", "São Paulo");
         
-        Cinema cine1 = new Cinema(null, "a", "a");
-        Cinema cine2 = new Cinema(null, "b", "b");
-        Cinema cine3 = new Cinema(null, "c", "c");
-        Cinema cine4 = new Cinema(null, "d", "d");
-        Cinema cine5 = new Cinema(null, "e", "e");
+        Filme fil1 = new Filme(null, "HOMEM-ARANHA: SEM VOLTA PARA CASA", "Ação", 14, 240, "Em Homem-Aranha: Sem Volta para Casa. ", 0,cine1);
+        Filme fil2 = new Filme(null, "AVATAR: O CAMINHO DA ÁGUA", "Aventura", 16, 120, "Em Avatar: O Caminho da Água. ", 1, cine2);
+        Filme fil3 = new Filme(null, "THOR: AMOR E TROVÃO", "Ação", 0, 245, "Thor: Amor e Trovão . ", 0, cine3);
+        Filme fil4 = new Filme(null, "DOUTOR ESTRANHO NO MULTIVERSO DA LOUCURA", "Aventura", 10, 160, "Em Doutor Estranho no Multiverso da Loucura.", 1,cine4);
+        Filme fil5 = new Filme(null, "TOP GUN: MAVERICK", "Desenho", 0, 90, "Na sequência de Top Gun: Ases Indomáveis.", 0,cine5);
         
         ArrayList<Cinema> cinemas = new ArrayList<>();
         cinemas.add(cine1);
@@ -69,13 +70,11 @@ public class DBService {
         filmess.add(fil1);
         filmess.add(fil1);
         
-        Sessao ses1 = null;
-        for(Filme fil : filmess) {
-            ses1 = new Sessao(null, 10.0, fil, cine5);
-        }
-        Sessao ses2 = new Sessao(null, 20.0, fil1, cine4);
-        Sessao ses3 = new Sessao(null, 10.0, fil1, cine3);
-        Sessao ses4 = new Sessao(null, 30.0, fil1, cine2);
+
+        Sessao ses1 = new Sessao(null, 10.0, fil5, cine5);
+        Sessao ses2 = new Sessao(null, 20.0, fil4, cine4);
+        Sessao ses3 = new Sessao(null, 10.0, fil3, cine3);
+        Sessao ses4 = new Sessao(null, 30.0, fil2, cine2);
         Sessao ses5 = new Sessao(null, 50.0, fil1, cine1);
         
         Cliente clie1 = new Cliente(null, "michael@email.com", "12345", LocalDate.of(2002, 8, 14));
@@ -102,74 +101,74 @@ public class DBService {
 
        
         //Assentos E
-        Assentos e1 = new Assentos(null,"E01", false);
-        Assentos e2 = new Assentos(null,"E02", false);
-        Assentos e3 = new Assentos(null,"E03", false);
-        Assentos e4 = new Assentos(null,"E04", false);
-        Assentos e5 = new Assentos(null,"E05", false);
-        Assentos e6 = new Assentos(null,"E06", false);
-        Assentos e7 = new Assentos(null,"E07", false);
-        Assentos e8 = new Assentos(null,"E08", false);
-        Assentos e9 = new Assentos(null,"E09", false);
-        Assentos e10 = new Assentos(null,"E10", false);
-        Assentos e11 = new Assentos(null,"E11", false);
-        Assentos e12 = new Assentos(null,"E12", false);
+        Assentos e1 = new Assentos(null,"E01", false,0);
+        Assentos e2 = new Assentos(null,"E02", false,0);
+        Assentos e3 = new Assentos(null,"E03", false,0);
+        Assentos e4 = new Assentos(null,"E04", false,0);
+        Assentos e5 = new Assentos(null,"E05", false,0);
+        Assentos e6 = new Assentos(null,"E06", false,0);
+        Assentos e7 = new Assentos(null,"E07", false,0);
+        Assentos e8 = new Assentos(null,"E08", false,0);
+        Assentos e9 = new Assentos(null,"E09", false,0);
+        Assentos e10 = new Assentos(null,"E10", false,0);
+        Assentos e11 = new Assentos(null,"E11", false,0);
+        Assentos e12 = new Assentos(null,"E12", false,0);
 
         //Assentos D
-        Assentos d1 = new Assentos(null,"D01", false);
-        Assentos d2 = new Assentos(null,"D02", false);
-        Assentos d3 = new Assentos(null,"D03", false);
-        Assentos d4 = new Assentos(null,"D04", false);
-        Assentos d5 = new Assentos(null,"D05", false);
-        Assentos d6 = new Assentos(null,"D06", false);
-        Assentos d7 = new Assentos(null,"D07", false);
-        Assentos d8 = new Assentos(null,"D08", false);
-        Assentos d9 = new Assentos(null,"D09", false);
-        Assentos d10 = new Assentos(null,"D10", false);
-        Assentos d11 = new Assentos(null,"D11", false);
-        Assentos d12 = new Assentos(null,"D12", false);
+        Assentos d1 = new Assentos(null,"D01", false,0);
+        Assentos d2 = new Assentos(null,"D02", false,0);
+        Assentos d3 = new Assentos(null,"D03", false,0);
+        Assentos d4 = new Assentos(null,"D04", false,0);
+        Assentos d5 = new Assentos(null,"D05", false,0);
+        Assentos d6 = new Assentos(null,"D06", false,0);
+        Assentos d7 = new Assentos(null,"D07", false,0);
+        Assentos d8 = new Assentos(null,"D08", false,0);
+        Assentos d9 = new Assentos(null,"D09", false,0);
+        Assentos d10 = new Assentos(null,"D10", false,0);
+        Assentos d11 = new Assentos(null,"D11", false,0);
+        Assentos d12 = new Assentos(null,"D12", false,0);
 
         //Assentos C
-        Assentos c1 = new Assentos(null,"C01", false);
-        Assentos c2 = new Assentos(null,"C02", false);
-        Assentos c3 = new Assentos(null,"C03", false);
-        Assentos c4 = new Assentos(null,"C04", false);
-        Assentos c5 = new Assentos(null,"C05", false);
-        Assentos c6 = new Assentos(null,"C06", false);
-        Assentos c7 = new Assentos(null,"C07", false);
-        Assentos c8 = new Assentos(null,"C08", false);
-        Assentos c9 = new Assentos(null,"C09", false);
-        Assentos c10 = new Assentos(null,"C10", false);
-        Assentos c11 = new Assentos(null,"C11", false);
-        Assentos c12 = new Assentos(null,"C12", false);
+        Assentos c1 = new Assentos(null,"C01", false,0);
+        Assentos c2 = new Assentos(null,"C02", false,0);
+        Assentos c3 = new Assentos(null,"C03", false,0);
+        Assentos c4 = new Assentos(null,"C04", false,0);
+        Assentos c5 = new Assentos(null,"C05", false,0);
+        Assentos c6 = new Assentos(null,"C06", false,0);
+        Assentos c7 = new Assentos(null,"C07", false,0);
+        Assentos c8 = new Assentos(null,"C08", false,0);
+        Assentos c9 = new Assentos(null,"C09", false,0);
+        Assentos c10 = new Assentos(null,"C10", false,0);
+        Assentos c11 = new Assentos(null,"C11", false,0);
+        Assentos c12 = new Assentos(null,"C12", false,0);
         
         //Assentos B
-        Assentos b1 = new Assentos(null,"B01", false);
-        Assentos b2 = new Assentos(null,"B02", false);
-        Assentos b3 = new Assentos(null,"B03", false);
-        Assentos b4 = new Assentos(null,"B04", false);
-        Assentos b5 = new Assentos(null,"B05", false);
-        Assentos b6 = new Assentos(null,"B06", false);
-        Assentos b7 = new Assentos(null,"B07", false);
-        Assentos b8 = new Assentos(null,"B08", false);
-        Assentos b9 = new Assentos(null,"B09", false);
-        Assentos b10 = new Assentos(null,"B10", false);
-        Assentos b11 = new Assentos(null,"B11", false);
-        Assentos b12 = new Assentos(null,"B12", false);
+        Assentos b1 = new Assentos(null,"B01", false,0);
+        Assentos b2 = new Assentos(null,"B02", false,0);
+        Assentos b3 = new Assentos(null,"B03", false,0);
+        Assentos b4 = new Assentos(null,"B04", false,0);
+        Assentos b5 = new Assentos(null,"B05", false,0);
+        Assentos b6 = new Assentos(null,"B06", false,0);
+        Assentos b7 = new Assentos(null,"B07", false,0);
+        Assentos b8 = new Assentos(null,"B08", false,0);
+        Assentos b9 = new Assentos(null,"B09", false,0);
+        Assentos b10 = new Assentos(null,"B10", false,0);
+        Assentos b11 = new Assentos(null,"B11", false,0);
+        Assentos b12 = new Assentos(null,"B12", false,0);
         
         //Assentos A
-        Assentos a1 = new Assentos(null,"A01", false);
-        Assentos a2 = new Assentos(null,"A02", false);
-        Assentos a3 = new Assentos(null,"A03", false);
-        Assentos a4 = new Assentos(null,"A04", false);
-        Assentos a5 = new Assentos(null,"A05", false);
-        Assentos a6 = new Assentos(null,"A06", false);
-        Assentos a7 = new Assentos(null,"A07", false);
-        Assentos a8 = new Assentos(null,"A08", false);
-        Assentos a9 = new Assentos(null,"A09", false);
-        Assentos a10 = new Assentos(null,"A10", false);
-        Assentos a11 = new Assentos(null,"A11", false);
-        Assentos a12 = new Assentos(null,"A12", false);
+        Assentos a1 = new Assentos(null,"A01", false,0);
+        Assentos a2 = new Assentos(null,"A02", false,0);
+        Assentos a3 = new Assentos(null,"A03", false,0);
+        Assentos a4 = new Assentos(null,"A04", false,0);
+        Assentos a5 = new Assentos(null,"A05", false,0);
+        Assentos a6 = new Assentos(null,"A06", false,0);
+        Assentos a7 = new Assentos(null,"A07", false,0);
+        Assentos a8 = new Assentos(null,"A08", false,0);
+        Assentos a9 = new Assentos(null,"A09", false,0);
+        Assentos a10 = new Assentos(null,"A10", false,0);
+        Assentos a11 = new Assentos(null,"A11", false,0);
+        Assentos a12 = new Assentos(null,"A12", false,0);
         
         repository.saveAll(Arrays.asList(
                 e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,
