@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Filme } from 'src/app/models/filme';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  filmes : Filme[] = [];
+
+
+  constructor(private service: AuthService) { }
 
   ngOnInit(): void {
+    this.mapear();
   }
 
+  mapear(){
+    this.service.todosFilme().subscribe(resposta => this.filmes = resposta);  
+  }
 }
