@@ -1,6 +1,6 @@
 <div class="container-fluid cinema">
     <div class="row d-flex">
-        <img class="imagemCinema col-md-3 d-flex" src="../../../assets/img/logo-1360163271218.png" alt="">
+        <img class="imagemCinema col-md-3 d-flex" src="../../../../assets/img/logo.jpg" alt="">
         <h1 class="titulo col-md-6 d-flex align-items-end">{{cinema.nomeCinema}}</h1>
     </div>
 </div>
@@ -29,192 +29,32 @@
 
 <!-----service section start----------->
 <div class="aboutCinema container-fluid">
-    <h1>Filmes e seções:</h1>
-    <div id="carousel-legenda" class="carousel slide col-md-12" data-ride="carousel"><!--Carousel -->
-
-                <!-- Indicadores -->
-                <ol class="carousel-indicators">
-
-                <li class="active" data-target="#carousel-legenda" data-slide-to="0"></li>
-
-                <li data-target="#carousel-legenda" data-slide-to="1"></li>
-
-                <li data-target="#carousel-legenda" data-slide-to="2"></li>
-
-                </ol>
-                    
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <a class="" routerLink="/filme/sobreFilme">
-                                    <img src="../../../assets/img/2428965.jpg">
-                                    <div class="carousel-caption">
-                                        <div>
-                                            <h3>Vingadores</h3>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-2">
-                                <img src="../../../assets/img/2428965.jpg">
-                                <div class="carousel-caption">
-                                    <div>
-                                        <h3>Batman</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <img src="../../../assets/img/2428965.jpg">
-                                <div class="carousel-caption">
-                                    <div>
-                                        <h3>Minios</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <img src="../../../assets/img/2428965.jpg">
-                                <div class="carousel-caption">
-                                    <div>
-                                        <h3>Vingadores</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <img src="../../../assets/img/2428965.jpg">
-                                <div class="carousel-caption">
-                                    <div>
-                                        <h3>Batman</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <img src="../../../assets/img/2428965.jpg">
-                                <div class="carousel-caption">
-                                    <div>
-                                        <h3>Minios</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Vingadores</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Batman</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Minios</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Vingadores</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Batman</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Minios</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <h1>Filmes:</h1>
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="col-md-2" *ngFor="let filme of filmes">
+                <h4>{{filme.nomeFilme}}</h4>
+                <div *ngIf="filme.idFilme == 1">
+                    <img src="../../../assets/img/Homem-Aranha-Sem-Volta-Para-Casa.jpg" class="img-fluid">
                 </div>
-
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Vingadores</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Batman</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Minios</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Vingadores</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Batman</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="../../../assets/img/2428965.jpg">
-                            <div class="carousel-caption">
-                                <div>
-                                    <h3>Minios</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div *ngIf="filme.idFilme == 2">
+                    <img src="../../../assets/img/av img.jpg" class="img-fluid">
                 </div>
+                <div *ngIf="filme.idFilme == 3">
+                    <img src="../../../assets/img/Thoramoretrovao.png" class="img-fluid">
+                </div>
+                <div *ngIf="filme.idFilme == 4">
+                    <img src="../../../assets/img/multiversoloucura.jpg" class="img-fluid">
+                </div>
+                <div *ngIf="filme.idFilme == 5">
+                    <img src="../../../assets/img/TopGunMaverick.jpg" class="img-fluid">
+                </div>
+                
+                <a class="btn" routerLink="/filme/sobre/{{filme.idFilme}}">Compra</a>
+            </div>
+        </div>
 
-                </div><!--/Inner -->
-
-                <!-- Controles -->
-                <a href="#carousel-legenda" class="" data-slide="prev">
-                </a>
-
-                <a href="#carousel-legenda" class="" data-slide="next">
-                </a>
-
-            </div><!--/Carousel -->
-
+    </div>
 <div class="serviceCinema container-fluid">
     <h1>Preços:</h1>
     <div class="row">
