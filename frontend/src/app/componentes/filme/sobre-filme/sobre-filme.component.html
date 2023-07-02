@@ -1,12 +1,51 @@
-<div class="container-fluid filme">
+<div class="container-fluid filme" *ngIf="filme.idFilme==1" style="background-image: url('../../../../assets/img/Homem-Aranha-Sem-Volta-Para-Casa.jpg')">
+        <div class="row d-flex">
+            <img class="imagemfilme col-md-3 d-flex" src="../../../assets/img/Homem-Aranha-Sem-Volta-Para-Casa.jpg" alt="">
+            <div class="col-md-6">
+                <h1 class="titulo  d-flex align-items-end">{{filme.nomeFilme}}</h1>
+            </div>
+        </div>
+    
+</div>
+
+<div class="container-fluid filme" *ngIf="filme.idFilme==2" style="background-image: url('../../../../assets/img/av img.jpg')">
     <div class="row d-flex">
-        <img class="imagemfilme col-md-3 d-flex" src="../../../assets/img/2428965.jpg" alt="">
+        <img class="imagemfilme col-md-3 d-flex" src="../../../assets/img/av img.jpg" alt="">
         <div class="col-md-6">
-            <div class="categoria d-flex align-items-end">Ação</div>
-            <div class="faixaEtaria d-flex align-items-end">14</div>
-            <h1 class="titulo  d-flex align-items-end">Os Vingadores: Ultimato</h1>
+            <h1 class="titulo  d-flex align-items-end">{{filme.nomeFilme}}</h1>
         </div>
     </div>
+
+</div>
+
+<div class="container-fluid filme" *ngIf="filme.idFilme==3" style="background-image: url('../../../../assets/img/Thoramoretrovao.png')">
+    <div class="row d-flex">
+        <img class="imagemfilme col-md-3 d-flex" src="../../../assets/img/Thoramoretrovao.png" alt="">
+        <div class="col-md-6">
+            <h1 class="titulo  d-flex align-items-end">{{filme.nomeFilme}}</h1>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid filme" *ngIf="filme.idFilme==4" style="background-image: url('../../../../assets/img/multiversoloucura.jpg')">
+    <div class="row d-flex">
+        <img class="imagemfilme col-md-3 d-flex" src="../../../assets/img/multiversoloucura.jpg" alt="">
+        <div class="col-md-6">
+            <h1 class="titulo  d-flex align-items-end">{{filme.nomeFilme}}</h1>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid filme" *ngIf="filme.idFilme==5" style="background-image: url('../../../../assets/img/TopGunMaverick.jpg')">
+    <div class="row d-flex">
+        <img class="imagemfilme col-md-3 d-flex" src="../../../assets/img/TopGunMaverick.jpg" alt="">
+        <div class="col-md-6">
+            <h1 class="titulo  d-flex align-items-end">{{filme.nomeFilme}}</h1>
+        </div>
+    </div>
+
 </div>
 
 <!----Cartazes dos filmes---->
@@ -14,109 +53,27 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Descrição:</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, commodi. Asperiores quisquam voluptates error ipsum a doloribus inventore quis deleniti, nisi nemo enim esse id eum dolorum facilis, ullam cumque.
+            {{filme.descricao}}
             <br>
         </div>
     </div>
 </section>
-
 <!-----service section start----------->
 <div class="aboutCinema container-fluid">
-    <h1>Seções:</h1>
-    <div class="row secao">
-        <div class="col-md-6 secao ">
-            <h1>Shopping ...</h1>
-            <h3>20/10</h3>
+    <h1 >Seções:</h1>
+    <div class="row secao"  >
+        <div class="col-md-6 secao " *ngFor="let sessao of sessoes">
+            <div *ngIf="sessao.idFilme == filme.idFilme">
+            <h1>{{sessao.nomeCinema}}</h1>
+            <h3>{{sessao.dDisponivel}}</h3>
             <div class="row barraLateral">
                 <h2 class="col-md-12">Sala 1</h2>
                 <div class="col-md-2">
-                <a class="" routerLink="/assentos">
+                <a class="" routerLink="/assentos/sobre/{{sessao.idSessao}}">
                     14:30
                 </a>
-                </div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>21/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 2</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>22/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 5</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>23/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 6</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>24/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 8</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-        </div>
-        <div class="col-md-6 secao ">
-            <h1>Shopping ...</h1>
-            <h3>20/10</h3>
-            <div class="row barraLateral">
-                <h2 class="col-md-12">Sala 1</h2>
-                <div class="col-md-2">
-                <a class="" href="assentos.html">
-                    14:30
-                </a>
-                </div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>21/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 2</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>22/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 5</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>23/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 6</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
-            </div>
-            <h3>24/10</h3>
-            <div class="row">
-                <h2 class="col-md-12">Sala 8</h2>
-                <div class="col-md-2">14:30</div>
-                <div class="col-md-2">16:00</div>
-                <div class="col-md-2">18:30</div>
-                <div class="col-md-2">19:00</div>
             </div>
         </div>
     </div>
 </div>
+
