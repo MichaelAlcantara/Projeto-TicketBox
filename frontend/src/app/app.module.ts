@@ -42,6 +42,8 @@ import { AssentoComponent } from './componentes/assento/assento.component';
 import { DebitoComponent } from './componentes/assento/formaPagamento/debito/debito.component';
 import { CreditoComponent } from './componentes/assento/formaPagamento/credito/credito.component';
 import { DinheiroComponent } from './componentes/assento/formaPagamento/dinheiro/dinheiro.component';
+import { CompraComponent } from './componentes/assento/compra/compra.component';
+import { FimComponent } from './componentes/assento/formaPagamento/fim/fim.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { DinheiroComponent } from './componentes/assento/formaPagamento/dinheiro
     DebitoComponent,
     CreditoComponent,
     DinheiroComponent,
+    CompraComponent,
+    FimComponent,
   ],
   imports: [
     BrowserModule,
