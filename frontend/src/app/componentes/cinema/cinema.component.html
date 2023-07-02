@@ -14,16 +14,16 @@
 <section class="service container-fluid">
     <div class="row" >
         <div class="col-md-2" *ngFor="let cinemas of cinema">
-            <a routerLink="sobreCinema/{{cinemas.id}}">
+            <a routerLink="sobre/{{cinemas.idCinema}}">
                 <button class="botaoCinema">
                     <div>
-                        
                         <p>{{cinemas.nomeCinema}}</p>
-                        <p>{{cinemas.id}}</p>
                         <p>{{cinemas.cidade}}</p>
                     </div>
+                
                 </button>
             </a>
+            
         </div>
     </div>     
 </section>
