@@ -34,6 +34,10 @@ public class Cinema implements Serializable{
 	@JsonIgnore
 	@OneToMany(mappedBy = "cinema") // Um para muitos
 	private List<Sessao> sessao = new ArrayList<>();
+	
+	@JsonIgnore
+    @OneToMany(mappedBy = "cinema") // Um para muitos
+    private List<Filme> filme = new ArrayList<>();
 
 	public Cinema() {
     }
